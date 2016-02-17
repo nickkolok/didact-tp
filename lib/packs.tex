@@ -27,14 +27,17 @@
 
 %Пакет для отображения исходного кода - с http://www.inp.nsk.su/~baldin/LaTeX/lurs-code.pdf
 \usepackage{listings}
+%\usepackage{listingsutf8}
 % подгружаемые языки — подробнее в документации listings
 \lstloadlanguages{C++}
 % включаем кириллицу и добавляем кое−какие опции
 \lstset{
 	language=C++, % выбираем язык по умолчанию
-	extendedchars=true, % включаем не латиницу
-	frame=tb , % рамка сверху и снизу
+%	extendedchars=\true, % включаем не-латиницу
+%	texcl=\true,
+	frame=tb, % рамка сверху и снизу
 	commentstyle=\itshape, % шрифт для комментариев
-	stringstyle=\bfseries
-} % шрифт для строк
+	stringstyle=\bfseries, % шрифт для строк
+}
 
+\input{../lib/listingcyr}

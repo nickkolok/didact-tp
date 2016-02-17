@@ -1,11 +1,13 @@
 #include <iostream>
-#include <ctime>
+#include <ctime> // Заголовочный файл, содержащий функции работы со временем
 using namespace std;
 
 int main(){
-	cout<<"А!"<<endl;//А А А
-	//Б А Б
-	unsigned int start_time =  clock(); // получаем начальное время в относительных единицах
+	cout<<"Поехали!"<<endl;
+
+	// Получаем начальное время в относительных единицах
+	unsigned int start_time =  clock();
+
 	int rez=7;
 	for(int i=0; i<1000000000; i++){
 		//Загрузим компьютер какими-нибудь бессмысленными вычислениями
@@ -14,13 +16,12 @@ int main(){
 		rez+=i*i/(i+5);
 	}
 
-	unsigned int end_time = clock(); // конечное время в относительных единицах
+	// Конечное время в относительных единицах
+	unsigned int end_time = clock();
 	cout<<rez<<endl;
-	unsigned int total_time=1.0*(end_time - start_time)/CLOCKS_PER_SEC; // искомое время в секундах
+	// Искомое время в секундах
+	unsigned int total_time=1.0*(end_time - start_time)/CLOCKS_PER_SEC;
 	//CLOCKS_PER_SEC равен количеству относительных единиц в секунде
 	cout<<total_time<<endl;
 	return 0;
 }
-
-//йцу кен гшщ зх ъфывапролджэячсмитьбюё
-//ЙЦУ КЕН ГШЩ ЗХ ЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮЁ	

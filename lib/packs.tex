@@ -25,3 +25,16 @@
 \renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
 
+%Пакет для отображения исходного кода - с http://www.inp.nsk.su/~baldin/LaTeX/lurs-code.pdf
+\usepackage{listings}
+% подгружаемые языки — подробнее в документации listings
+\lstloadlanguages{C++}
+% включаем кириллицу и добавляем кое−какие опции
+\lstset{
+	language=C++, % выбираем язык по умолчанию
+	extendedchars=true, % включаем не латиницу
+	frame=tb , % рамка сверху и снизу
+	commentstyle=\itshape, % шрифт для комментариев
+	stringstyle=\bfseries
+} % шрифт для строк
+

@@ -25,19 +25,19 @@
 \renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
 
-%Пакет для отображения исходного кода - с http://www.inp.nsk.su/~baldin/LaTeX/lurs-code.pdf
+% Пакет для отображения исходного кода - с http://www.inp.nsk.su/~baldin/LaTeX/lurs-code.pdf
 \usepackage{listings}
 %\usepackage{listingsutf8}
 % подгружаемые языки — подробнее в документации listings
 \lstloadlanguages{C++}
-% включаем кириллицу и добавляем кое−какие опции
+% Конфигурируем
 \lstset{
 	language=C++, % выбираем язык по умолчанию
-%	extendedchars=\true, % включаем не-латиницу
-%	texcl=\true,
 	frame=tb, % рамка сверху и снизу
 	commentstyle=\itshape, % шрифт для комментариев
 	stringstyle=\bfseries, % шрифт для строк
 }
 
+% А эта тёмная магия позволяет нормально работать с кириллицей в листингах
 \input{../lib/listingcyr}
+

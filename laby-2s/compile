@@ -1,0 +1,1 @@
+pdflatex metodichka.tex && evince metodichka.pdf

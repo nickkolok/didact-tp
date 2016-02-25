@@ -1,0 +1,9 @@
+\newcounter{labworkcounter}
+\newcounter{labtaskcounter}[labworkcounter]
+
+\newcommand{\labwork}[1]{
+	\newpage
+	\chapter*{Лабораторная работа №\value{labworkcounter}}
+	Тема: <<#1>>
+}
+

@@ -1,9 +1,21 @@
 \newcounter{labworkcounter}
+\setcounter{labworkcounter}{1}
+
 \newcounter{labtaskcounter}[labworkcounter]
 
 \newcommand{\labwork}[1]{
 	\newpage
-	\chapter*{Лабораторная работа №\value{labworkcounter}}
-	Тема: <<#1>>
+	\section*{Лабораторная работа №{\thelabworkcounter}}
+	\textit{Тема: <<{#1}>>}
+	%\vspace{10mm}
+	\stepcounter{labworkcounter}
 }
 
+\newcommand{\labtask}{
+	\stepcounter{labtaskcounter}%Чтобы не с нуля начинать
+	\subsection*{Задание \thelabtaskcounter}
+}
+
+\newcommand{\reservedtasks}{
+	\subsection*{Резервные задания}
+}

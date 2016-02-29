@@ -36,7 +36,10 @@ int main(){
 	cout<<"Введите строку: "<<endl;
 	char* str= new char[maxlength];
 	gets(str);
-	cout<<remove_last_character(str);
+	char* truncated_str=remove_last_character(str);
+	cout<<truncated_str<<endl;
 
+	delete[] str; // Не забываем!
+	delete[] truncated_str;
 	return 0;
 }

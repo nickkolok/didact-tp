@@ -163,3 +163,6 @@ TSWLatexianTemp*
 
 # don't know whose temp files these are
 .goutputstream-*
+
+# temp files for inserting git revisions into PDF
+.gitrevision

@@ -166,3 +166,5 @@ TSWLatexianTemp*
 
 # temp files for inserting git revisions into PDF
 .gitrevision
+# for date
+.builddate

@@ -1,0 +1,7 @@
+someVariable = loooooooooooooooooooooooooooooooooooongVariable+
+	shortVariable;
+
+someVariable = loooooooooooooooooooooooooooooooooooongVariable+
+	anoooooooooooooooooooooooooooooooooooootherVariable+
+	shortVariable;
+

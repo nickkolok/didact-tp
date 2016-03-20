@@ -17,8 +17,9 @@
 Code Style борется с ситуациями, когда в <<журнал>> (репозиторий) СКВ записываются изменения, которые ничего не значат.
 
 Итак, при выполнении лабораторных работ студентам следует руководствоваться нижеследующим Code Style.
-Заметим, что он значительно мягче большинства регламентов, принятых в крупных проектах,
+Заметим, что он в целом значительно мягче большинства регламентов, принятых в крупных проектах,
 и может в некоторых случаях дополняться преподавателем.
+%Особое внимание следует ещё раз обратить на то, что Code Style различных проектов может радикально отличаться (т. е. некоторые пункты различных Code Style могут быть взаимоисключающими).
 
 
 \begin{enumerate}
@@ -47,16 +48,64 @@ Code Style борется с ситуациями, когда в <<журнал>
 
 				Правильно:
 				\codesnippet{code-style-snippets/tabs-right-1}
-%				\begin{lstlisting}{Language={C++},caption={},frame=single,numbers=left}
-%\shortlisting{
-%cin>>n;
-%if(n<0){
-%	cout<<"n не должно быть отрицательным, используется абсолютная величина"<<endl;
-%	n=-n;
-%}
-%cout<<sqrt(n);
-%}
-%				\end{lstlisting}
+				Неправильно:
+				\codesnippet{code-style-snippets/tabs-wrong-1}
+
+
+			\item
+				Внутри switch операторы case/default и break выполняют роль скобок.
+				После последнего варианта ``скобка'' пропускается, отступ уменьшается на 2.
+				break и continue внутри циклов скобками не считаются.
+				Правильно:
+				\codesnippet{code-style-snippets/case-right-1}
+				Неправильно:
+				\codesnippet{code-style-snippets/case-wrong-1}
+
+
+			\item
+				Если открывающая скобка стоит в конце строки, то парная ей должна стоять в начале (и уменьшать отступ).
+				Правильно:
+				\codesnippet{code-style-snippets/braces-right-1}
+
+				Неправильно:
+				\codesnippet{code-style-snippets/braces-wrong-1}
+
+			\item
+				Перенос выражений (разрыв строки без точки с запятой) осуществляется по следующим правилам:
+				\begin{enumerate}
+					\item
+						Вторая и последующие части разрываемой строки имеют отступ, увеличенный на 1 по сравнению с первой частью.
+					\item
+						Бинарные операторы  <\!< и >\!> и префиксные унарные операторы пишутся в начале новой строки.
+
+						Правильно:
+						\codesnippet{code-style-snippets/linebreak-stream-right-1}
+						Неправильно:
+						\codesnippet{code-style-snippets/linebreak-stream-wrong-1}
+
+					\item
+						Бинарные операторы + - * / || \&\& и постфиксные унарные операторы пишутся в конце переносимой строки.
+
+						Правильно:
+						\codesnippet{code-style-snippets/linebreak-binary-right-1}
+						Неправильно:
+						\codesnippet{code-style-snippets/linebreak-binary-wrong-1}
+
+					\item
+						Операторы + * || и \&\& могут писаться на отдельной строке,
+						если разрываемая строка содержит 3 и более однотипных выражения.
+						При этом допускается отступ у строки с оператором уменьшить до отступа первой части переносимой строки
+
+						Правильно:
+						\codesnippet{code-style-snippets/linebreak-binary-more-than-two-right-1}
+						Неправильно:
+						\codesnippet{code-style-snippets/linebreak-binary-more-than-two-wrong-1}
+
+				\end{enumerate}
+
+
+			\item
+
 		\end{enumerate}
 	\item
 \end{enumerate}

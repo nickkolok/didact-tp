@@ -7,17 +7,16 @@ typedef unsigned long long int number;
 
 number* renew_cache(number* oldcache, size_t oldsize, size_t newsize){
 	cout<<"Обновляем кэш..."<<endl;
-	number * newcache = new number[newsize];
+	number* newcache = new number[newsize];
 	if(oldcache){ // Здесь используется соглашение о нулевых указателях
 		memcpy(newcache, oldcache, oldsize*sizeof(number)); // Куда, откуда, сколько
-	}	
+		delete[] oldcache; // Старый кэш нам больше не нужен
+		oldcache=0; // Реверанс соглашению о нулевых указателях
+	}
 	for(size_t i=oldsize; i<newsize; i++){
-		newcache[i]=0;
+		newcache[i]=0; // Там может оказаться "мусор", который будет мешаться
 	}
 
-	if(oldcache){
-		delete[] oldcache;
-	}
 	return newcache;
 }
 
@@ -30,7 +29,7 @@ number fibo(number n){
 
 	if(n>=cachesize){ // Числа n в кэше нет и быть не может
 		cache=renew_cache(cache,cachesize,n*2);
-		cachesize=n*2;
+		cachesize=n*2; // С запасом: перемещение кэша с надставкой - затратная операция
 	}
 	if(n==0){
 		return 0;
@@ -38,7 +37,7 @@ number fibo(number n){
 	if(n==1){
 		return 1;
 	}
-	if(cache[n]){
+	if(cache[n]){ // Если там не 0 - значит, уже вычисляли, можно взять готовое значение
 		return cache[n];
 	}
 	cout<<" Честно считаем для n = "<<n<<endl;
@@ -56,5 +55,6 @@ int main() {
 }
 
 /* Задание для самостоятельной работы:
-Заменить рекурсию на цикл, измерить изменение производительности.
+1. Заменить рекурсию на цикл, измерить изменение производительности.
+2. Изменить порядок слагаемых, измерить изменение производительности.
 */

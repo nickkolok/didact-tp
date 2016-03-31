@@ -17,8 +17,8 @@ int main(){
 	cout
 		<< "double:           " << sizeof(double)           << endl
 		<< "double*:          " << sizeof(double*)          << endl
-		<< "bool :            " << sizeof(bool)             << endl
-		<< "bool* :           " << sizeof(bool*)            << endl
+		<< "bool:             " << sizeof(bool)             << endl
+		<< "bool*:            " << sizeof(bool*)            << endl
 		<< "massiv:           " << sizeof(massiv)           << endl
 		<< "double[5]:        " << sizeof(double[5])        << endl
 		<< "new double[200]:  " << sizeof(new double[200])  << endl

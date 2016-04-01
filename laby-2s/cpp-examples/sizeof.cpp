@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-typedef double massiv[5];
+typedef double massiv[5]; // massiv - это новое короткое имя для double[5]
 
 void anyFunction(massiv arr){
 	// Передача массива в функцию происходит де-факто как передача указателя,
@@ -11,7 +11,7 @@ void anyFunction(massiv arr){
 }
 
 int main(){
-	massiv doubleMassiv;
+	massiv doubleMassiv; // То же самое, что double doubleMassiv[5];
 	double doubleStaticArr[10];
 	double *doubleDynamicArr = new double[200];
 	cout

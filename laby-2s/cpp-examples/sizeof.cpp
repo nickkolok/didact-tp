@@ -14,6 +14,7 @@ int main(){
 	massiv doubleMassiv; // То же самое, что double doubleMassiv[5];
 	double doubleStaticArr[10];
 	double *doubleDynamicArr = new double[200];
+	double doubleInitialized[] = { 1, 1, 1, 1, 1 };
 	cout
 		<< "double:           " << sizeof(double)           << endl
 		<< "double*:          " << sizeof(double*)          << endl
@@ -24,9 +25,11 @@ int main(){
 		<< "new double[200]:  " << sizeof(new double[200])  << endl
 		<< "doubleMassiv:     " << sizeof(doubleMassiv)     << endl
 		<< "doubleStaticArr:  " << sizeof(doubleStaticArr)  << endl
-		<< "doubleDynamicArr: " << sizeof(doubleDynamicArr) << endl;
+		<< "doubleDynamicArr: " << sizeof(doubleDynamicArr) << endl
+		<< "doubleInitialized:" << sizeof(doubleInitialized)<< endl;
 	anyFunction(doubleMassiv);
 	anyFunction(doubleStaticArr);
 	anyFunction(doubleDynamicArr);
+	anyFunction(doubleInitialized);
 	delete[] doubleDynamicArr; // Не забываем!
 }

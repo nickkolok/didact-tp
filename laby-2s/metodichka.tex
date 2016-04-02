@@ -12,6 +12,10 @@
 Дата и время сборки:
 \input{.builddate}
 
+\tableofcontents
+
+\addcontentsline{toc}{chapter}{Лабораторные работы}
+
 \input{tasks/strings-char}
 \input{tasks/strings-char-to-function}
 \input{tasks/pointers-formulas}
@@ -20,12 +24,16 @@
 \input{tasks/arrays-recursive}
 
 \newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Правила оформления программного кода}
 \chapter*{Правила оформления программного кода}
 \input{code-style}
 
 
 \newpage
-\chapter*{Приложение --- листинги программ}
+\phantomsection
+\addcontentsline{toc}{chapter}{Листинги программ}
+\chapter*{Листинги программ}
 
 \codeexample{Измерение времени выполнения кода}{timecount}
 \newpage

@@ -27,6 +27,8 @@
 }
 
 \newcommand{\codeexample}[2]{
+	\phantomsection
+	\addcontentsline{toc}{section}{#1}
 	\lstinputlisting[label=#2,caption={#1}]{cpp-examples/#2.cpp}
 }
 

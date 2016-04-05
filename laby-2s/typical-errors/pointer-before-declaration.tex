@@ -1,0 +1,12 @@
+\begin{typerror}
+	Получение указателя на переменную до её объявления.
+
+	С этой ошибкой программа может не компилироваться.
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/pointer-before-declaration-1-wrong}
+	Правильно:
+	\codesnippet{typical-errors-snippets/pointer-before-declaration-1-right}
+
+	Вообще не следует использовать переменную выше той строки, в которой она объявлена.
+\end{typerror}

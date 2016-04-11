@@ -1,0 +1,25 @@
+\begin{typerror}
+	Нарушения соответствия операторов \textbf{new} и \textbf{delete}.
+
+	Ошибки этого типа, как правило, не приводят к некорректной работе программы;
+	более того, зачастую современные компиляторы работают корректно, тем не менее, стандарт языка предусматривает в таком случае неопределённое поведение.
+
+	Основное правило:
+	если при операторе \textbf{new} стояли квадратные скобки \textbf{[ ]}, то и при соответствующем операторе \textbf{delete} должны быть квадратные скобки \textbf{[ ]};
+	если же при \textbf{new} их не было, то и при \textbf{delete} быть не должно.
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/delete-brackets-1-wrong}
+
+	Правильно:
+	\codesnippet{typical-errors-snippets/delete-brackets-1-right}
+
+	Удаление массива:
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/delete-brackets-2-wrong}
+
+	Правильно:
+	\codesnippet{typical-errors-snippets/delete-brackets-2-right}
+	
+\end{typerror}

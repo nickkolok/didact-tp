@@ -1,0 +1,3 @@
+int *d = new int[15];
+//...
+delete[] d;

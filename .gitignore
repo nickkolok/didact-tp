@@ -165,6 +165,6 @@ TSWLatexianTemp*
 .goutputstream-*
 
 # temp files for inserting git revisions into PDF
-.gitrevision
+#.gitrevision
 # for date
-.builddate
+#.builddate

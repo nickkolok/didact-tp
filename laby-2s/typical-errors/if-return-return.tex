@@ -1,0 +1,20 @@
+\begin{typerror}
+	\label{TE_if-return-return}
+	Избыточный условный оператор при \textbf{return}.
+
+	Таких операторов следует избегать: они затрудняют читаемость кода,
+	хотя их негативное действие на производительность и нивелируется большинством современных компиляторов.
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/if-return-return-1-wrong}
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/if-return-return-2-wrong}
+
+	Во втором случае к тому же налицо типовая ошибка №\ref{TE_if-return-else}.
+
+	Правильно:
+	\codesnippet{typical-errors-snippets/if-return-return-1-right}
+
+	
+\end{typerror}

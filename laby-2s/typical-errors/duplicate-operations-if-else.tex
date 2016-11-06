@@ -1,0 +1,22 @@
+\begin{typerror}
+	\label{TE_duplicate-operations-if-else}
+	Повторяющиеся операции в различных ветвях условного оператора.
+
+	Как правило, встречаются в начале или в конце блока, иногда после исправления типовой ошибки №\ref{TE_duplicate-calculations}.
+	Обычно не влияют на правильность работы программы, но ухудшают её читаемость.
+
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/duplicate-operations-if-else-1-wrong}
+
+	От \textbf{else}-ветви вообще можно избавиться, заметив, что содержащаяся в ней команда выполняется независимо от условия.
+	Получаем:
+
+	\codesnippet{typical-errors-snippets/duplicate-operations-if-else-2-wrong}
+
+	Наконец, исправляем типовую ошибку №\ref{TE_duplicate-calculations}.
+
+	Правильно:
+	\codesnippet{typical-errors-snippets/duplicate-operations-if-else-1-right}
+
+\end{typerror}

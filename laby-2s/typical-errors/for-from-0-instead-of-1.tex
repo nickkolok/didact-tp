@@ -1,0 +1,17 @@
+\begin{typerror}
+	\label{TE_for-from-0-instead-of-1}
+	Итерирование с нуля в случаях, когда можно начать с единицы.
+
+	Рассмотрим следующий фрагмент кода, предназначенный для поиска минимума в массиве.
+
+	Неправильно:
+	\codesnippet{typical-errors-snippets/for-from-0-instead-of-1-1-wrong}
+
+	Для \textbf{i=0} условие \textbf{mas[i] < min} никогда не будет выполнено,
+	так как перед циклом мы предположили, что минимум равен нулевому элементу.
+	Можем смело начать перебор с единицы:
+
+	Правильно:
+	\codesnippet{typical-errors-snippets/for-from-0-instead-of-1-1-right}
+
+\end{typerror}

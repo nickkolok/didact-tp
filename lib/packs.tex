@@ -6,13 +6,14 @@
 \usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{indentfirst} % включить отступ у первого абзаца
 \usepackage[dvips]{graphicx} %хотим вставлять рисунки?
+\usepackage{ifthen}
 \graphicspath{{illustr/}}%путь к рисункам
 
 \makeatletter
 \renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку:
 \makeatother %Смысл этих трёх строчек мне непонятен, но поверим "Запискам дебианщика"
 
-\usepackage{geometry} % Меняем поля страницы. 
+\usepackage{geometry} % Меняем поля страницы.
 \geometry{left=1cm}% левое поле
 \geometry{right=1cm}% правое поле
 \geometry{top=1cm}% верхнее поле

@@ -1,23 +1,36 @@
-<table class="table table-bordered normtabl"><tbody>
-	<tr>
-		<th>
+\begin{table}[ph]
+
+\begin{tabular}{|l|l|l|}
+\hline
 			Паскаль
 &			Javascript
 &			Пояснение
-\\			begin
-&			{
-		</td>
-		<td rowspan="2">
+\\\hline
+			begin
+&
+			\{
+&
+	\multirow{2}{*}{
 			Открывающая и закрывающая операторные скобки соответственно.
 			Позволяют группировать другие операторы в циклах и т. д.
-\\			end
-&			}
-\\			var<br/>
-			a,b: integer;<br/>
-			s: string;<br/>
-			m: array[1..7]of char;
-			
-&			var a,b,s;<br/>
+	}
+\\\hline
+			end
+&			\}
+&
+\\\hline
+			$\begin{array}{l}
+			\mbox{var}
+			\\
+			~~a,b: integer;
+			\\
+			~~s: string;
+			\\
+			~~m: array[1..7] of char;
+			\end{array}$
+&
+			\codesnippet{code-snippets/analog-var}
+			var a,b,s;<br/>
 			var m=[];
 &			В Javascript переменные не имеют фиксированного типа, он определяется автоматически.
 			Более того, массив не имеет фиксированного размера иможет состоять из элементов различного типа:
@@ -25,49 +38,65 @@
 			var m=['a',1,2.3,[4,5]];
 			<br/>
 			(хотя так обычно не делают).
-\\			{комментарий}
-&			/*комментарий*/
-			<br/>
+\\\hline
+			\{комментарий\}
+&
+			/*комментарий*/
+			
 			//комментарий
-&			Первый вариант называется многострочным комментарием, второй - однострочным
+&
+			Первый вариант называется многострочным комментарием, второй - однострочным
 			(всё, что после // и до конца строки - комментарий,
 			то есть компьютером не читается и нужно лишь для удобства человека)
-\\			if(a=b) then begin<br/>
-			&nbsp;&nbsp;c:=0;<br/>
-			end else begin<br/>
-			&nbsp;&nbsp;d:=1;<br/>
+\\\hline
+			if(a=b) then begin
+
+			~~c:=0;
+
+			end else begin
+
+			~~d:=1;
+
 			end;
-&			if(a==b){<br/>
-			&nbsp;&nbsp;c=0;<br/>
-			}else{<br/>
-			&nbsp;&nbsp;d=1;<br/>
-			}
-	&			Условный оператор (ветвление).
+&			if(a==b)\{
+
+			~~c=0;<br/>
+			\}else\{<br/>
+			~~d=1;<br/>
+			\}
+&			Условный оператор (ветвление).
 			Обратите внимание на то, что для сравнения переменных в условии в JS используется запись
 			a==b, а для присваивания - запись c=0
-\\			for i:=1 to n do begin<br/>
-			&nbsp;&nbsp;s:=s+i;<br/>
+\\\hline
+			for i:=1 to n do begin<br/>
+			~~s:=s+i;<br/>
 			end;
-&			for(i=1;i&lt;n;i++){<br/>
-			&nbsp;&nbsp;s+=i;<br/>
-		}
+&			for(i=1;i<n;i++)\{<br/>
+			~~s+=i;<br/>
+			\}
 &			Цикл со счётчиком.
 			Обратите внимание на сокращённое присваивание:
-			<br/>
+
 				i++ значит i=i+1 
-			<br/>
+
 			s+=i значит s=s+i
-\\			while i&lt;n do begin<br/>
-			&nbsp;&nbsp;s:=s+i;<br/>
-			&nbsp;&nbsp;i:=i+1;<br/>
+\\\hline
+			while i<n do begin
+
+			~~s:=s+i;
+
+			~~i:=i+1;
+
 			end;
-&			while(i&lt;n){<br/>
-			&nbsp;&nbsp;s+=i;<br/>
-			&nbsp;&nbsp;i++;<br/>	
-			}
+&			while(i<n)\{<br/>
+			~~s+=i;<br/>
+			~~i++;<br/>	
+			
+			\}
 &			Цикл с условием (с предусловием).
 			Делает то же самое, что и предыдущий, кроме присваивания i начального значения.
-		</td>
-	</tr>
-</tbody></table>
 
+\\\hline
+\end{tabular}
+
+\end{table}

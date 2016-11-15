@@ -6,7 +6,7 @@ char* deleteDots(char* str) {
 	if (!len)
 		return NULL;
 
-	while (i < len){
+	while (i <= len){
 		if(str[i]!='.'){
 			newStr[z] = str[i];
 			z++;

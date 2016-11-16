@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip> // Для boolalpha
 
 using namespace std;
 
@@ -27,16 +28,27 @@ int main()
 {
 	int i1=3,i2=-146;
 	bitswap(i1,i2);
-	cout<<i1<<" "<<i2<<endl;
+	cout << i1 << " " << i2 << endl;
 	double d1=1.5,d2=3.14;
 	// bitswap(d1,d2); // Не работает - к дробным поразрядные операторы неприменимы
 	forceswap(d1,d2);
-	cout<<d1<<" "<<d2<<endl;
+	cout << d1 << " " << d2 << endl;
+
 	//Поменяем местами, например, стандартный поток вывода и поток ошибок
+
+	//В стандартном потоке вывода будем true и false выводить словами,
+	cout << boolalpha;
+	//... а в потоке ошибок - цифрами (как по умолчанию):
+	cerr << noboolalpha;
+
+	cout << true  << endl;
+	cerr << false << endl;
+
+	// Собственно обмен потоков
 	forceswap(cerr,cout);
-	// Восклицательный знак уйдёт в поток ошибок, но обычно их вывод объединяется,
-	// поэтому невооружённым глазом разница не видна
-	cout<<"!"<<endl;
+
+	cout << true  << endl;
+	cerr << false << endl;
 
 	return 0;
 }

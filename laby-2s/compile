@@ -1,10 +1,2 @@
 #!/bin/bash
-DATE=`date +%Y-%m-%d---%H-%M-%S`
-git log --pretty=format:"%h" -1 > .gitrevision
-echo $DATE > .builddate
-pdflatex metodichka.tex
-pdflatex metodichka.tex
-echo "неизвестна" > .builddate
-echo "неизвестна" > .gitrevision
-mv metodichka.pdf metodichka-$DATE.pdf
-evince metodichka-$DATE.pdf
+../lib/compile-common.sh metodichka

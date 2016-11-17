@@ -3,8 +3,10 @@
 \begin{tabular}{|l|l|l|}
 \hline
 			Паскаль
-&			Javascript
-&			Пояснение
+&
+			C++
+&
+			Пояснение
 \\\hline
 			begin
 &
@@ -28,59 +30,35 @@
 \\\hline
 			\{комментарий\}
 &
-			/*комментарий*/
-
-			//комментарий
+			\barecodesnippet{code-snippets/analog-comment.cpp}{language=C++}
 &
 			Первый вариант называется многострочным комментарием, второй - однострочным
-			(всё, что после // и до конца строки - комментарий,
+			(всё, что после \textbf{//} и до конца строки - комментарий,
 			то есть компьютером не читается и нужно лишь для удобства человека)
 \\\hline
-			if(a=b) then begin
-
-			~~c:=0;
-
-			end else begin
-
-			~~d:=1;
-
-			end;
-&			if(a==b)\{
-
-			~~c=0;<br/>
-			\}else\{<br/>
-			~~d=1;<br/>
-			\}
-&			Условный оператор (ветвление).
+			\barecodesnippet{code-snippets/analog-if-else.pas}{language=Pascal}
+&
+			\barecodesnippet{code-snippets/analog-if-else.cpp}{language=C++}
+&
+			Условный оператор (ветвление).
 			Обратите внимание на то, что для сравнения переменных в условии в JS используется запись
 			a==b, а для присваивания - запись c=0
 \\\hline
-			for i:=1 to n do begin<br/>
-			~~s:=s+i;<br/>
-			end;
-&			for(i=1;i<n;i++)\{<br/>
-			~~s+=i;<br/>
-			\}
+			\barecodesnippet{code-snippets/analog-for.pas}{language=Pascal}
+&
+			\barecodesnippet{code-snippets/analog-for.cpp}{language=C++}
 &			Цикл со счётчиком.
 			Обратите внимание на сокращённое присваивание:
 
-				i++ значит i=i+1
+			i++ значит i=i+1
 
 			s+=i значит s=s+i
 \\\hline
-			while i<n do begin
-
-			~~s:=s+i;
-
-			~~i:=i+1;
-
-			end;
-&			while(i<n)\{<br/>
-			~~s+=i;<br/>
-			~~i++;<br/>
-
-			\}
-&			Цикл с условием (с предусловием).
+			\barecodesnippet{code-snippets/analog-while.pas}{language=Pascal}
+&
+			\barecodesnippet{code-snippets/analog-while.cpp}{language=C++}
+&
+			Цикл с условием (с предусловием).
 			Делает то же самое, что и предыдущий, кроме присваивания i начального значения.
 
 \\\hline

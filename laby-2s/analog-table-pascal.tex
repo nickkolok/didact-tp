@@ -1,6 +1,6 @@
 \begin{table}[ph]
 
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|m{8cm}|}
 \hline
 			Паскаль
 &
@@ -12,15 +12,15 @@
 &
 			\{
 &
-	\multirow{2}{*}{
+	\multirow{2}{8cm}{%\parbox{}{
 			Открывающая и закрывающая операторные скобки соответственно.
 			Позволяют группировать другие операторы в циклах и т. д.
-	}
-\\\hline
+	}%}
+\\[0.2cm]\cline{1-2}
 			end
 &			\}
 &
-\\\hline
+\\[0.2cm]\hline
 			\barecodesnippet{code-snippets/analog-var.pas}{language=Pascal}
 &
 			\barecodesnippet{code-snippets/analog-var.cpp}{language=C++}
@@ -60,7 +60,6 @@
 &
 			Цикл с условием (с предусловием).
 			Делает то же самое, что и предыдущий, кроме присваивания i начального значения.
-
 \\\hline
 \end{tabular}
 

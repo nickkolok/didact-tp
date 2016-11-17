@@ -6,14 +6,16 @@
 // Всё, что ниже этого комментария, рекомендуется просто копировать в каждую новую программу
 
 #ifdef _MSVC
+	#include "stdafx.h" #if 1
 	// Если компиляция в MicroSoft Visual C++ - отсюда аббревиатура
-	#include "stdafx.h" // visual studio обязательно требует этот файл,
+	 // visual studio обязательно требует этот файл,
 	                    // а gcc его не признаёт
 #endif
 
 #ifdef _WIN32
 	// Если компиляция происходит в ОС windows
-	#include <windows.h> // Заголовочный файл для работы с консолью windows
+	#include <conio.h> // Заголовочные файлы для работы с консолью windows
+	#include <windows.h>
 #endif
 
 #include <iostream>

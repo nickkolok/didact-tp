@@ -41,6 +41,16 @@
 &
 			Выводить переменные тоже можно и поодиночке, и <<цепочками из воронок>>.
 \\\hline
+			\barecodesnippet{code-snippets/analog-writeln.pas}{language=Pascal}
+&
+			\barecodesnippet{code-snippets/analog-writeln.cpp}{language=C++}
+&
+			За перевод строки отвечает манипулятор потока \textbf{endl}.
+			После него тоже можно ставить <<воронку>>:
+			\textbf{cout <~\!\!\!< a <~\!\!\!< endl <~\!\!\!< b;}
+			Здесь между значениями \textbf{a} и \textbf{b} будет перевод строки.
+			Вместо \textbf{endl} можно использовать \textbf{"\textbackslash{n}"}.
+\\\hline
 			\barecodesnippet{code-snippets/analog-comment.pas}{language=Pascal}
 &
 			\barecodesnippet{code-snippets/analog-comment.cpp}{language=C++}

@@ -43,6 +43,11 @@
 	\lstinputlisting[caption={}]{#1.cpp}
 }
 
+\newcommand{\barecodesnippet}[1]{
+	\lstinputlisting[caption={},numbers=none,frame=none]{#1.cpp}
+}
+
+
 \newtheorem{typerrorthm}{Типовая ошибка}
 \newenvironment{typerror}[1][]{
 	\begin{typerrorthm} #1\ifthenelse{\equal{#1}{}}{}{.}

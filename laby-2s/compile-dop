@@ -1,0 +1,2 @@
+#!/bin/bash
+../lib/compile-common.sh metodichka-dopkurs

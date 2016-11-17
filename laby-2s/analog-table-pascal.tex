@@ -8,17 +8,18 @@
 &
 			Пояснение
 \\\hline
-			begin
+			\barecodesnippet{code-snippets/analog-begin.pas}{language=Pascal}
 &
-			\{
+			\barecodesnippet{code-snippets/analog-begin.cpp}{language=C++}
 &
-	\multirow{2}{8cm}{%\parbox{}{
+	\multirow{2}{8cm}{
 			Открывающая и закрывающая операторные скобки соответственно.
 			Позволяют группировать другие операторы в циклах и т. д.
-	}%}
+	}
 \\[0.2cm]\cline{1-2}
-			end
-&			\}
+			\barecodesnippet{code-snippets/analog-end.pas}{language=Pascal}
+&
+			\barecodesnippet{code-snippets/analog-end.cpp}{language=C++}
 &
 \\[0.2cm]\hline
 			\barecodesnippet{code-snippets/analog-var.pas}{language=Pascal}
@@ -28,7 +29,7 @@
 			В C++, в отличие от Паскаля, переменные можно объявлять почти в любом месте программы,
 			а не обязательно в специальном блоке перед \textbf{begin}.
 \\\hline
-			\{комментарий\}
+			\barecodesnippet{code-snippets/analog-comment.pas}{language=Pascal}
 &
 			\barecodesnippet{code-snippets/analog-comment.cpp}{language=C++}
 &
@@ -42,12 +43,15 @@
 &
 			Условный оператор (ветвление).
 			Обратите внимание на то, что для сравнения переменных в условии в С++ используется запись
-			\textbf{a==b}, а для присваивания --- запись \textbf{c=0}
+			\textbf{a==b}, а для присваивания --- запись \textbf{c=0}.
+			Условие в C++ следует заключать в скобки.
+			Аналог \textbf{then} отсутствует.
 \\\hline
 			\barecodesnippet{code-snippets/analog-for.pas}{language=Pascal}
 &
 			\barecodesnippet{code-snippets/analog-for.cpp}{language=C++}
-&			Цикл со счётчиком.
+&
+			Цикл со счётчиком.
 			Обратите внимание на сокращённое присваивание:
 			\textbf{i++} означает \textbf{i=i+1}, а
 			\textbf{s+=i} означает \textbf{s=s+i}
@@ -58,6 +62,7 @@
 &
 			Цикл с условием (с предусловием).
 			Делает то же самое, что и предыдущий, кроме присваивания \textbf{i} начального значения.
+			Условие в C++ следует заключать в скобки.
 \\\hline
 \end{tabular}
 

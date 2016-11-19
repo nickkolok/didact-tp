@@ -1,0 +1,5 @@
+*
+!*.cpp
+!*.pas
+!*.js
+!.gitignore

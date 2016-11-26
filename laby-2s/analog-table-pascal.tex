@@ -1,5 +1,4 @@
 \begin{table}[ph]
-
 \begin{tabular}{|l|l|m{8cm}|}
 \hline
 			Паскаль
@@ -102,6 +101,19 @@
 			Делает то же самое, что и предыдущий, кроме присваивания \textbf{i} начального значения.
 			Условие в C++ следует заключать в скобки.
 \\\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ph]
+\begin{tabular}{|l|l|m{6cm}|}
+\hline
+			Паскаль
+&
+			C++
+&
+			Пояснение
+\\\hline
+
 			\barecodesnippet{code-snippets/analog-repeat.pas}{language=Pascal}
 &
 			\barecodesnippet{code-snippets/analog-repeat.cpp}{language=C++}
@@ -110,7 +122,13 @@
 			Первый раз выполняется всегда, затем --- в зависимости от конечного условия.
 			Условие в C++ следует заключать в скобки.
 			В Паскале цикл прервётся, если условие, стоящее после \textbf{until} (англ. <<до>>) истинно,
-			в С++ --- если условие, стоящее после \textbf{while} (англ. <<пока>>) ложно.
+			в С++ --- если условие, стоящее после \textbf{while} (англ. <<пока>>), ложно.
+\\\hline
+			\barecodesnippet{code-snippets/analog-case.pas}{language=Pascal}
+&
+			\barecodesnippet{code-snippets/analog-case.cpp}{language=C++}
+&
+			Обратите внимание на наличие \textbf{break;}.
 \\\hline
 \end{tabular}
 

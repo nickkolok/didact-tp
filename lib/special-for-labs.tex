@@ -56,3 +56,12 @@
 }{
 	\end{typerrorthm}
 }
+
+\newtheorem{notbadadvicethm}{Невредный совет}
+\newenvironment{notbadadvice}[1][]{
+	\begin{notbadadvicethm} #1\ifthenelse{\equal{#1}{}}{}{.}
+	\addcontentsline{toc}{section}{{\thenotbadadvicethm}. #1}
+	\par
+}{
+	\end{notbadadvicethm}
+}

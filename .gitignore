@@ -171,3 +171,6 @@ TSWLatexianTemp*
 
 # merge temp files
 *.orig
+
+# Kile backups
+*.tex.backup

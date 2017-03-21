@@ -39,6 +39,11 @@
 	\lstinputlisting[label=#2,caption={#1}]{cpp-examples/#2.cpp}
 }
 
+\newcommand{\codeexercise}[1]{
+	\phantomsection
+	\lstinputlisting[label={EL_#1},caption={(к упражнению)}]{../exercises-listings/#1.cpp}
+}
+
 \newcommand{\codesnippet}[1]{
 	\lstinputlisting[caption={}]{#1.cpp}
 }

@@ -9,6 +9,6 @@ double fun(double x)
 	if (x >= 2 && x <= 4){
 		return atan(x + 3);
 	}
-	return nan;
+	return 0;
 	// Строчка выше добавлена, так как совсем ничего не возвращать как-то нехорошо
 }

@@ -7,4 +7,4 @@ pdflatex $1.tex
 echo "неизвестна" > .builddate
 echo "неизвестна" > .gitrevision
 mv $1.pdf $1-$DATE.pdf
-evince $1-$DATE.pdf
+nohup evince $1-$DATE.pdf & disown

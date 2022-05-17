@@ -8,12 +8,16 @@
 
 \input{title}
 
-\input{notice}
+\includepdf{secondpage.pdf}
+
+
 
 \tableofcontents
 
 \addcontentsline{toc}{chapter}{О чём эта книга?}
 \input{about}
+\vfill
+\input{notice}
 
 \addcontentsline{toc}{chapter}{Лабораторные работы}
 
@@ -73,6 +77,8 @@
 \addcontentsline{toc}{chapter}{Упражнения}
 \input{exercises-listings}
 \input{exercises}
+
+\includepdf{lastpage.pdf}
 
 \end{document}
 

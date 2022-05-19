@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstring>
 #include <cstdio>
- 
+
 using namespace std;
- 
+
 int main()
 {
 	char str[100];
@@ -19,7 +19,7 @@ int main()
 	for (int i = 0; i < 256; i++){
 		*(mm+i) = 0;
 	}
-		
+
     int n = strlen (str);
     for (int i = 0; i < n; i++) {
 		if(i==0||
@@ -29,11 +29,14 @@ int main()
 				!((*(y+i-1)>='A' && *(y+i-1)<='Z')||(*(y+i-1)>='a' && *(y+i-1)<='z'))
 			)
 		){
-		
+
 			int v=0,g=0;
 			for(int j=i;((*(y+j)>='A' && *(y+j)<='Z')||(*(y+j)>='a' && *(y+j)<='z'));j++){
 				v++;
-				if(*(y+j)=='A'||*(y+j)=='a'||*(y+j)=='E'||*(y+j)=='e'||*(y+j)=='U'||*(y+j)=='u'||*(y+j)=='O'||*(y+j)=='o'){
+				if(
+					*(y+j)=='A'||*(y+j)=='a'||*(y+j)=='E'||*(y+j)=='e'||
+					*(y+j)=='U'||*(y+j)=='u'||*(y+j)=='O'||*(y+j)=='o'
+				){
 					g++;
 				}
 			}
